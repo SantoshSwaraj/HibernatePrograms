@@ -1,0 +1,1858 @@
+!SESSION 2017-04-09 18:01:38.948 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2017-04-09 18:02:53.874
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1320]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-09 18:04:40.365
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-09 18:04:40.458
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-09 18:04:42.888
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Santosh Kushwaha'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2017-04-09 18:11:33.776
+!MESSAGE Updating the index from remote failed. ; version: 1.100.0.v20160303-1450
+!STACK 0
+java.io.EOFException: Unexpected end of ZLIB input stream
+	at java.util.zip.InflaterInputStream.fill(Unknown Source)
+	at java.util.zip.InflaterInputStream.read(Unknown Source)
+	at java.util.zip.ZipInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at com.google.common.io.ByteStreams.copy(ByteStreams.java:169)
+	at com.google.common.io.ByteSink.writeFrom(ByteSink.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.Zips.unzip(Zips.java:82)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:293)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-04-09 18:41:01.031 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/D:/HibernatePrograms/ -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2017-04-09 18:41:30.103
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1320]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-09 18:42:24.933
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-09 18:42:27.319
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Santosh Kushwaha'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2017-04-09 18:42:35.104
+!MESSAGE Server ‘org.jboss.tools’ failed with exception: Connect to tools.jboss.org:443 [tools.jboss.org/209.132.182.95] failed: connect timed out. ; version: 1.100.0.v20160303-1450
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to tools.jboss.org:443 [tools.jboss.org/209.132.182.95] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:244)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	... 16 more
+                                                                                                                                                                                                                                                                                                                                                                                            !SESSION 2017-04-10 12:44:37.392 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2017-04-10 12:46:05.126
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1320]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-04-10 12:48:25.723
+!MESSAGE Unable to load resource file:/D:/HibernatePrograms/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.xml.sax.SAXParseExceptionpublicId: file:/D:/HibernatePrograms/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; systemId: file:/D:/HibernatePrograms/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.getResource(ResourceHandler.java:351)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadResource(ResourceHandler.java:327)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:231)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:397)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:254)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: file:/D:/HibernatePrograms/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; systemId: file:/D:/HibernatePrograms/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1297)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 23 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-04-10 12:48:25.805
+!MESSAGE The persisted workbench has no top-level windows, so reinitializing with defaults.
+!STACK 0
+java.lang.Exception
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:236)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:397)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:254)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-10 12:49:01.431
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-10 12:49:04.384
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Santosh Kushwaha'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2017-04-10 12:49:30.163
+!MESSAGE Server ‘org.jboss.tools’ failed with exception: Connect to tools.jboss.org:443 [tools.jboss.org/209.132.182.95] failed: connect timed out. ; version: 1.100.0.v20160303-1450
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to tools.jboss.org:443 [tools.jboss.org/209.132.182.95] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:244)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	... 16 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 14:56:42.139
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 14:56:42.175
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 14:56:45.104
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 14:56:45.140
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 14:56:46.683
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 14:56:46.716
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 14:59:13.796
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 14:59:13.832
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-04-10 15:05:30.963
+!MESSAGE failed to load maven project for org.eclipse.ui.part.FileEditorInput(/Hibernate-XML/pom.xml)
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:804)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1010)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4724)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3522)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2315)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2193)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3932)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4721)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1008)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:242)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:732)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1053)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Contains: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM D:\HibernatePrograms\Hibernate-XML\pom.xml: Duplicated tag: 'modelVersion' (position: START_TAG seen ...>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<modelVersion>... @20:15)  @ line 20, column 15
+ for project  at D:\HibernatePrograms\Hibernate-XML\pom.xml
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM D:\HibernatePrograms\Hibernate-XML\pom.xml: Duplicated tag: 'modelVersion' (position: START_TAG seen ...>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<modelVersion>... @20:15)  @ line 20, column 15
+ for project  at D:\HibernatePrograms\Hibernate-XML\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:794)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1010)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4724)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3522)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2315)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2193)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3932)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4721)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1008)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:242)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:732)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1053)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM D:\HibernatePrograms\Hibernate-XML\pom.xml: Duplicated tag: 'modelVersion' (position: START_TAG seen ...>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<modelVersion>... @20:15)  @ line 20, column 15
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:579)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:273)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 25 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 0 2017-04-10 15:05:30.964
+!MESSAGE Could not read maven project
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2017-04-10 15:05:30.964
+!MESSAGE 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM D:\HibernatePrograms\Hibernate-XML\pom.xml: Duplicated tag: 'modelVersion' (position: START_TAG seen ...>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<modelVersion>... @20:15)  @ line 20, column 15
+ for project  at D:\HibernatePrograms\Hibernate-XML\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM D:\HibernatePrograms\Hibernate-XML\pom.xml: Duplicated tag: 'modelVersion' (position: START_TAG seen ...>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<modelVersion>... @20:15)  @ line 20, column 15
+ for project  at D:\HibernatePrograms\Hibernate-XML\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:794)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1010)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4724)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3522)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2315)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2193)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3932)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4721)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1008)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:242)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:732)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1053)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM D:\HibernatePrograms\Hibernate-XML\pom.xml: Duplicated tag: 'modelVersion' (position: START_TAG seen ...>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<modelVersion>... @20:15)  @ line 20, column 15
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:579)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:273)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 25 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-04-10 15:05:31.073
+!MESSAGE Could not read pom.xml
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:565)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:574)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:542)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:498)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:351)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:298)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:154)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:89)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.io.ModelParseException: expected START_TAG or END_TAG not TEXT (position: TEXT seen ...>\r\n  </build>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<m... @20:3) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:122)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:86)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:563)
+	... 24 more
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected START_TAG or END_TAG not TEXT (position: TEXT seen ...>\r\n  </build>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<m... @20:3) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1121)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2068)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3845)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:117)
+	... 26 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-04-10 15:05:31.073
+!MESSAGE Could not read pom.xml
+!STACK 0
+org.apache.maven.model.io.ModelParseException: expected START_TAG or END_TAG not TEXT (position: TEXT seen ...>\r\n  </build>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<m... @20:3) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:122)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:86)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:563)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:574)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:542)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:498)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:351)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:298)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:154)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:89)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected START_TAG or END_TAG not TEXT (position: TEXT seen ...>\r\n  </build>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<m... @20:3) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1121)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2068)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3845)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:117)
+	... 26 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-04-10 15:05:32.527
+!MESSAGE Could not read pom.xml
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:565)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:574)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:542)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:498)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:351)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:298)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:154)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:89)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.io.ModelParseException: expected START_TAG or END_TAG not TEXT (position: TEXT seen ...>\r\n  </build>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<m... @20:3) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:122)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:86)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:563)
+	... 24 more
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected START_TAG or END_TAG not TEXT (position: TEXT seen ...>\r\n  </build>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<m... @20:3) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1121)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2068)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3845)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:117)
+	... 26 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-04-10 15:05:32.527
+!MESSAGE Could not read pom.xml
+!STACK 0
+org.apache.maven.model.io.ModelParseException: expected START_TAG or END_TAG not TEXT (position: TEXT seen ...>\r\n  </build>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<m... @20:3) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:122)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:86)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:563)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:574)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:542)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:498)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:351)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:298)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:154)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:89)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected START_TAG or END_TAG not TEXT (position: TEXT seen ...>\r\n  </build>\r\n \thttp://maven.apache.org/xsd/maven-4.0.0.xsd">\r\n<m... @20:3) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1121)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2068)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3845)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:117)
+	... 26 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:07:52.924
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:07:52.960
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:07:55.351
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:07:55.383
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:09:18.826
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:09:18.859
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:09:56.509
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:09:56.533
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:11:49.091
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:11:49.124
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:12:29.398
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:12:29.426
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:13:26.125
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:13:26.137
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:14:54.579
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:14:54.594
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:19:35.142
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:19:35.154
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-04-10 15:21:15.725
+!MESSAGE Unexpected exception: No repository found at https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:283)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:186)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$10.run(MarketplaceCatalog.java:253)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-10 15:21:15.726
+!MESSAGE No repository found at https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download.
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-04-10 15:24:05.825
+!MESSAGE Unexpected exception: No repository found at https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:283)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:186)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$10.run(MarketplaceCatalog.java:253)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-10 15:24:05.826
+!MESSAGE No repository found at https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download.
+
+!ENTRY org.eclipse.equinox.p2.updatesite 2 0 2017-04-10 15:24:36.397
+!MESSAGE Error processing update site mirror.
+!STACK 0
+org.xml.sax.SAXParseException; systemId: http://www.devboost.de/hedlpro/update_trunk/associateSites.xml; lineNumber: 1; columnNumber: 50; White spaces are required between publicId and systemId.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.getAssociateSites(DefaultSiteParser.java:90)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.processSite(DefaultSiteParser.java:859)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.handleInitialState(DefaultSiteParser.java:459)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.startElement(DefaultSiteParser.java:886)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.parse(DefaultSiteParser.java:541)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:152)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor167.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.epp.internal.mpc.ui.operations.AbstractProvisioningOperation.addRepositories(AbstractProvisioningOperation.java:92)
+	at org.eclipse.epp.internal.mpc.ui.operations.ResolveFeatureNamesOperation.run(ResolveFeatureNamesOperation.java:46)
+	at org.eclipse.epp.internal.mpc.ui.wizards.FeatureSelectionWizardPage$4.run(FeatureSelectionWizardPage.java:399)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2017-04-10 15:32:04.826 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/D:/HibernatePrograms/ -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2017-04-10 15:32:26.030
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1320]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-10 15:33:22.260
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-10 15:33:22.313
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-10 15:33:24.890
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Santosh Kushwaha'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 15:33:26.944
+!MESSAGE Checking if clean build is required.
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 15:33:27.601
+!MESSAGE Clean build is required. Scheduling clean workspace job.
+
+!ENTRY org.eclipse.osgi 2 0 2017-04-10 15:33:30.139
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer", thread "Thread[Worker-1,5,main]" timed out waiting (5269ms) for thread "Thread[Worker-12,5,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.7.0.20160603-1933 [1199]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.m2e.jdt"; type="osgi.bundle"; version:Version="1.7.0.20160603-1933"; singleton:="true" [id=1199] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3345)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3321)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2849)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:2774)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2812)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1895)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3298)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2693)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2857)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1962)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.createExternalArchiveDelta(DeltaProcessor.java:933)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.checkExternalArchiveChanges(DeltaProcessor.java:804)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2003)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:271)
+	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:368)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1592)
+	at org.eclipse.rse.internal.files.ui.resources.SystemRemoteEditManager.refreshRemoteEditProject(SystemRemoteEditManager.java:794)
+	at org.eclipse.rse.internal.files.ui.Activator$InitRemoteEditJob.run(Activator.java:77)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 4 2017-04-10 15:33:33.649
+!MESSAGE An internal error has occurred.
+!STACK 0
+org.eclipse.swt.SWTException: Unsupported or unrecognized format
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.internal.image.FileFormat.load(FileFormat.java:84)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:146)
+	at org.eclipse.swt.graphics.ImageDataLoader.load(ImageDataLoader.java:22)
+	at org.eclipse.swt.graphics.ImageData.<init>(ImageData.java:331)
+	at org.eclipse.jface.resource.URLImageDescriptor.getImageData(URLImageDescriptor.java:108)
+	at org.eclipse.jface.resource.URLImageDescriptor.getImageData(URLImageDescriptor.java:100)
+	at de.devboost.eclipse.feedback.util.CachedImageDescriptor.getImageData(CachedImageDescriptor.java:31)
+	at de.devboost.eclipse.feedback.util.ImageHelper.getImage(ImageHelper.java:29)
+	at de.devboost.license.eclipse.ui.LicenseConfigurationWizard.<init>(LicenseConfigurationWizard.java:64)
+	at de.devboost.license.eclipse.ui.StartupListener.getWizardOpener(StartupListener.java:25)
+	at de.devboost.eclipse.feedback.AbstractStartupListener$1.runInUIThread(AbstractStartupListener.java:86)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 15:33:34.434
+!MESSAGE Cleaning workspace.
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 15:33:34.444
+!MESSAGE Cleaning project Hibernate-XML
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2017-04-10 15:33:35.814
+!MESSAGE Server ‘org.jboss.tools’ failed with exception: Connect to tools.jboss.org:443 [tools.jboss.org/209.132.182.95] failed: Read timed out. ; version: 1.100.0.v20160303-1450
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to tools.jboss.org:443 [tools.jboss.org/209.132.182.95] failed: Read timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	... 16 more
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 15:33:36.526
+!MESSAGE Building project Hibernate-XML
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:33:40.375
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:33:40.406
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 15:33:41.022
+!MESSAGE Cleaning project RemoteSystemsTempFiles
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 15:33:41.076
+!MESSAGE Building project RemoteSystemsTempFiles
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:33:41.343
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:33:41.373
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:35:05.264
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:35:05.288
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:36:00.104
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:36:00.145
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:37:23.538
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:37:23.555
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:39:25.389
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:39:25.408
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:39:27.050
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:39:27.064
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:39:41.459
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:39:41.473
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:40:31.230
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:40:31.244
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:41:13.645
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:41:13.658
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:43:33.817
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:43:33.831
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:51:15.689
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:51:15.699
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:57:01.262
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:57:01.279
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:57:13.193
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:57:13.203
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:57:19.085
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 15:57:19.096
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:09:21.929
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:09:21.941
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:20:46.256
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:20:46.269
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:25:11.892
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:25:11.905
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:25:34.263
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:25:34.295
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:26:30.547
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:26:30.588
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:45:50.251
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:45:50.263
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:49:44.825
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:49:44.836
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:51:40.645
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:51:40.656
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:51:45.809
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:51:45.820
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:51:55.675
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:51:55.685
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:52:31.942
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:52:31.953
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:53:10.495
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:53:10.505
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:55:02.032
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:55:02.045
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:55:26.015
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:55:26.025
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:59:26.094
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:59:26.165
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:59:26.422
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:59:26.442
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:59:26.617
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:59:26.631
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:59:27.675
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 16:59:27.691
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:00:47.743
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:00:47.758
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:00:49.005
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:00:49.020
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:01:31.554
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:01:31.567
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:01:42.126
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:01:42.141
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:03:09.662
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:03:09.673
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:08:48.416
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:08:48.430
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:08:59.181
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:08:59.192
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.updatesite 2 0 2017-04-10 17:10:22.659
+!MESSAGE Error processing update site mirror.
+!STACK 0
+org.xml.sax.SAXParseException; systemId: http://www.devboost.de/hedlpro/update_trunk/associateSites.xml; lineNumber: 1; columnNumber: 50; White spaces are required between publicId and systemId.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.getAssociateSites(DefaultSiteParser.java:90)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.processSite(DefaultSiteParser.java:859)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.handleInitialState(DefaultSiteParser.java:459)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.startElement(DefaultSiteParser.java:886)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.eclipse.equinox.internal.p2.updatesite.DefaultSiteParser.parse(DefaultSiteParser.java:541)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:152)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$10.run(MarketplaceCatalog.java:253)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SESSION 2017-04-10 17:22:21.821 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data file:/D:/HibernatePrograms/ -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2017-04-10 17:22:25.514
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1320]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.3.201612191259-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-10 17:23:36.921
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-10 17:23:36.940
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-10 17:23:36.956
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-10 17:23:37.799
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Santosh Kushwaha'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 17:24:24.303
+!MESSAGE Checking if clean build is required.
+
+!ENTRY de.devboost.hedlpro.resource.hedl 1 0 2017-04-10 17:24:24.879
+!MESSAGE No clean build is required.
+
+!ENTRY org.eclipse.ui 4 4 2017-04-10 17:24:28.047
+!MESSAGE An internal error has occurred.
+!STACK 0
+org.eclipse.swt.SWTException: Unsupported or unrecognized format
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.internal.image.FileFormat.load(FileFormat.java:84)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:146)
+	at org.eclipse.swt.graphics.ImageDataLoader.load(ImageDataLoader.java:22)
+	at org.eclipse.swt.graphics.ImageData.<init>(ImageData.java:331)
+	at org.eclipse.jface.resource.URLImageDescriptor.getImageData(URLImageDescriptor.java:108)
+	at org.eclipse.jface.resource.URLImageDescriptor.getImageData(URLImageDescriptor.java:100)
+	at de.devboost.eclipse.feedback.util.CachedImageDescriptor.getImageData(CachedImageDescriptor.java:31)
+	at de.devboost.eclipse.feedback.util.ImageHelper.getImage(ImageHelper.java:29)
+	at de.devboost.license.eclipse.ui.LicenseConfigurationWizard.<init>(LicenseConfigurationWizard.java:64)
+	at de.devboost.license.eclipse.ui.StartupListener.getWizardOpener(StartupListener.java:25)
+	at de.devboost.eclipse.feedback.AbstractStartupListener$1.runInUIThread(AbstractStartupListener.java:86)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:27:18.704
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:27:18.726
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:28:55.218
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:28:55.254
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:29:36.035
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:29:36.054
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:30:05.231
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:30:05.243
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:33:57.454
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:33:57.489
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:34:54.863
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:34:54.875
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:35:19.517
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:35:19.534
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:44:40.177
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:44:40.192
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:45:02.088
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:45:02.140
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:52:45.844
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:52:45.860
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:54:11.546
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:54:11.559
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:55:45.164
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:55:45.176
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:55:57.038
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:55:57.051
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:56:31.761
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 17:56:31.774
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY de.devboost.hedlpro.ui 1 0 2017-04-10 17:57:32.133
+!MESSAGE Set HEDL code generation state to false
+
+!ENTRY de.devboost.hedlpro.ui 1 0 2017-04-10 17:57:32.908
+!MESSAGE Set HEDL code generation state to true
+
+!ENTRY de.devboost.hedlpro.ui 1 0 2017-04-10 17:57:34.252
+!MESSAGE Set HEDL code generation state to false
+
+!ENTRY de.devboost.hedlpro.ui 1 0 2017-04-10 17:57:35.316
+!MESSAGE Set HEDL code generation state to true
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:02:18.007
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:02:18.029
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:02:57.033
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:02:57.047
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:03:19.590
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:03:19.606
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:03:41.044
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:03:41.055
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:03:51.675
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:03:51.692
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:04:45.031
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:04:45.042
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:06:58.583
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:06:58.594
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:09:27.579
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:09:27.592
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:09:49.444
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:09:49.462
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:09:51.452
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 18:09:51.550
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:30:50.035
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:30:50.117
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:30:51.392
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:30:51.493
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:31:13.878
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:31:13.891
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:31:15.197
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:31:15.251
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:31:38.741
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:31:38.754
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:31:39.996
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:31:40.020
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:32:16.279
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:32:16.313
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:45:47.958
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 19:45:47.976
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.net 4 0 2017-04-10 19:57:29.201
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error 'The proxy auto-configuration script could not be downloaded
+' #12167.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:01:55.856
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:01:55.871
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:08:36.049
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:08:36.063
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:10:15.259
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:10:15.271
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:12:28.220
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:12:28.233
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:13:09.969
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:13:09.995
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:13:32.009
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:13:32.025
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:14:28.639
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:14:28.651
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:14:51.399
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:14:51.412
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:18:18.166
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:18:18.182
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:21:02.942
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:21:02.957
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-10 20:23:47.499
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-10 20:23:48.049
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:49:25.962
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 20:49:25.996
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:11:27.750
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:11:27.782
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:52:50.256
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:52:50.286
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:53:48.493
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:53:48.521
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:55:47.721
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:55:47.751
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:58:41.732
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:58:41.753
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:59:13.539
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 21:59:13.568
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:03:56.500
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:03:56.537
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:09:48.401
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:09:48.416
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:10:43.123
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:10:43.138
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:14:12.855
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:14:12.870
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:14:43.127
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:14:43.144
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:16:04.473
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:16:04.486
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:16:48.556
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:16:48.567
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:17:23.364
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:17:23.376
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:17:25.549
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:17:25.560
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:17:52.223
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:17:52.236
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:22:45.905
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:22:45.919
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:23:19.378
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:23:19.391
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:23:20.650
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:23:20.661
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:23:41.954
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:23:41.965
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:23:50.457
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:23:50.470
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:24:09.899
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:24:09.909
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:24:45.925
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:24:45.936
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:25:23.379
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:25:23.390
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:25:51.972
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:25:51.985
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:26:24.300
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:26:24.311
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:26:39.824
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:26:39.835
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:27:06.169
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:27:06.183
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:27:21.281
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:27:21.296
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:27:40.827
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-04-10 22:27:40.836
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
