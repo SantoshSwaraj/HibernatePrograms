@@ -1,0 +1,28 @@
+package co.santosh.hbm.o2o.uni;
+
+public class Passport {
+	private Integer passId;
+	private String nationality;
+	private Passport passport;
+	
+	public Integer getPassId() {
+		return passId;
+	}
+	public void setPassId(Integer passId) {
+		this.passId = passId;
+	}
+	public String getNationality() {
+		return nationality;
+	}
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
+	}
+	
+	public Passport getPassport() {
+		return passport;
+	}
+	public void setPassport(Passport passport) {
+		this.passport = passport;
+	}
+	
+}

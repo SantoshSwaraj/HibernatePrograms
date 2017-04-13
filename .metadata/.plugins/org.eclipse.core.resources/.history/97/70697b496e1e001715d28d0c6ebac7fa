@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="co.santosh.hbm.Student" table="STUDENT">  
+    <id name="sid" column="SID">  
+     <generator class="increment"></generator>  
+    </id>  
+    <property name="name">
+    	<column name="NAME" length="20" not-null="true"></column>
+    </property> 
+  </class>
+    
+  <class name="co.santosh.hbm.Department" table="DEPARTMENT">  
+    <id name="deptId" column="DEPT_ID">  
+     <generator class="increment"></generator>  
+    </id>  
+    <property name="deptName">
+    	<column name="DEPARTMENT" length="20" not-null="true"></column>
+    </property> 
+  </class>  
+            
+ </hibernate-mapping>  

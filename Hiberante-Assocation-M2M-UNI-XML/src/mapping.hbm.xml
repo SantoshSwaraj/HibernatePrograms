@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>    
+ <class name="co.santosh.hbm.m2m.uni.Faculty" table="FACULTY">  
+    <id name="staffId" column="STAFF_ID">  
+     <generator class="native"></generator>  
+    </id>  
+    <property name="facName">
+    	<column name="FACULTY_NAME" length="20" not-null="true"></column>
+    </property> 
+    <!-- unidirectional many to many mapping using join table concept -->
+    <set name="course" table="FacultyCourse">
+    	<key column="staffId"/>
+    	<many-to-many class="co.santosh.hbm.m2m.uni.Course" column="COURSE_ID"></many-to-many>
+    </set>
+  </class> 
+  
+  <class name="co.santosh.hbm.m2m.uni.Course" table="COURSE">  
+    <id name="courseId" column="COURSE_ID">  
+     <generator class="native"></generator>  
+    </id>  
+    <property name="courseName">
+    	<column name="COURSE_NAME" length="20" not-null="true"></column>
+    </property> 
+    
+  </class>
+            
+ </hibernate-mapping>  

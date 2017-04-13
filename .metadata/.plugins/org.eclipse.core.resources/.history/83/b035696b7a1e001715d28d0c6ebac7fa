@@ -1,0 +1,9 @@
+package co.santosh.test;
+
+import org.hibernate.SessionFactory;
+
+public class HibernateTest {
+	public static void main(String args[]){
+		SessionFactory sessionfactory = HibernateUtils.getSessionFactory(); 
+	}
+}

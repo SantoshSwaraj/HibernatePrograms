@@ -1,0 +1,19 @@
+package co.santosh.hbm.o2o.bi;
+
+public class Alphabet {
+	private Integer aid;
+	private String alphaName;
+	
+	public Integer getAid() {
+		return aid;
+	}
+	public void setAid(Integer aid) {
+		this.aid = aid;
+	}
+	public String getAlphaName() {
+		return alphaName;
+	}
+	public void setAlphaName(String alphaName) {
+		this.alphaName = alphaName;
+	}
+}

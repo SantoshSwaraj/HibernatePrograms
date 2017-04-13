@@ -20,6 +20,12 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Hibernate-Assocation-M2M-BI-XML"/>
+			<item value="Hibernate-Assocation-O2O-BI-XML"/>
+			<item value="Hiberante-Assocation-M2M-UNI-XML"/>
+			<item value="Hibernate-Assocation-O2O-UNI-XML"/>
+			<item value="Hibernate-Association-O2M-UNI-XML"/>
+			<item value="Hibernate-Association-M2O-XML"/>
 			<item value="Hibernate-CRUD-Annotation"/>
 			<item value="Hibernate-CRUD-XML"/>
 			<item value="Hibernate-Annotation"/>
@@ -28,6 +34,12 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Hibernate-Assocation-M2M-BI-XML"/>
+			<item value="Hibernate-Assocation-O2O-BI-XML"/>
+			<item value="Hiberante-Assocation-M2M-UNI-XML"/>
+			<item value="Hibernate-Assocation-O2O-UNI-XML"/>
+			<item value="Hibernate-Association-O2M-UNI-XML"/>
+			<item value="Hibernate-Association-M2O-XML"/>
 			<item value="Hibernate-CRUD-Annotation"/>
 			<item value="Hibernate-CRUD-XML"/>
 			<item value="Hibernate-Annotation"/>

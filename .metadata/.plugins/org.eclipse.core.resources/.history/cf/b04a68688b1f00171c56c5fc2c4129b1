@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>    
+ <class name="co.santosh.hbm.m2m.bi.Employee" table="EMPLOYEE">  
+    <id name="EmpId" column="EMP_ID">  
+     <generator class="native"></generator>  
+    </id>  
+    <property name="EmpName">
+    	<column name="EMP_NAME" length="20" not-null="true"></column>
+    </property> 
+    <set name="projects" table="emp_proj"
+        	inverse="false" lazy="true" fetch="select" cascade="all" >
+    	 <key>
+             <column name="EMP_ID" not-null="true" />
+          </key>
+         <many-to-many entity-name="co.santosh.hbm.m2m.bi.Project">
+            <column name="PROJ_ID" not-null="true" />
+        </many-to-many>
+    </set>
+ </class> 
+  
+  <class name="co.santosh.hbm.m2m.bi.Project" table="PROJECT">  
+    <id name="ProjId" column="PROJ_ID">  
+     <generator class="native"></generator>  
+    </id>  
+    <property name="ProjName">
+    	<column name="ALPHA_NAME" length="20" not-null="true"></column>
+    </property> 
+    
+    <set name="employees" table="emp_proj" inverse="true" lazy="true" fetch="select">
+       <key>
+           <column name="PROJ_ID" not-null="true" />
+       </key>
+       <many-to-many entity-name="co.santosh.hbm.m2m.bi.Employee">
+          <column name="EMP_ID" not-null="true" />
+       </many-to-many>
+    </set>
+  </class>
+            
+ </hibernate-mapping>  

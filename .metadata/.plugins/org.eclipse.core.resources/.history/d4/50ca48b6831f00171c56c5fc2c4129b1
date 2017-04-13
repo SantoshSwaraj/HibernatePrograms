@@ -1,0 +1,28 @@
+package co.santosh.hbm.m2m.bi;
+
+import java.util.Set;
+
+public class Project {
+	private Integer ProjId;
+	private String ProjName;
+	private Set<Employee> employees;
+	protected Integer getProjId() {
+		return ProjId;
+	}
+	protected void setProjId(Integer projId) {
+		ProjId = projId;
+	}
+	protected String getProjName() {
+		return ProjName;
+	}
+	protected void setProjName(String projName) {
+		ProjName = projName;
+	}
+	protected Set<Employee> getEmployees() {
+		return employees;
+	}
+	protected void setEmployees(Set<Employee> employees) {
+		this.employees = employees;
+	}
+
+}

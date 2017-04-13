@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>    
+ <class name="co.santosh.hbm.o2o.bi.Number" table="NUMBER">  
+    <id name="nid" column="NUM_ID">  
+     <generator class="native"></generator>  
+    </id>  
+    <property name="numName">
+    	<column name="NUB_NAME" length="20" not-null="true"></column>
+    </property> 
+    
+    <one-to-one name="alphabet" cascade="all"></one-to-one>
+  </class> 
+  
+  <class name="co.santosh.hbm.o2o.bi.Alphabet" table="ALPHABET">  
+    <id name="aid" column="ALPHA_ID">  
+     <generator class="foreign">  
+          <param name="property">number</param>  
+     </generator>   
+    </id>  
+    <property name="alphaName">
+    	<column name="ALPHA_NAME" length="20" not-null="true"></column>
+    </property> 
+    <one-to-one name="number" property-ref="alphabet"></one-to-one>
+  </class>
+            
+ </hibernate-mapping>  
