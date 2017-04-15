@@ -20,6 +20,12 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Hibernate-Criteria"/>
+			<item value="Hibernate-HQL1"/>
+			<item value="Hibernate-Inheritence-TPS"/>
+			<item value="Hibernate-Inheritence-TPC"/>
+			<item value="Hibernate-Inheritence-TPH"/>
+			<item value="Hibenate-Assocation-M2M-BI-Annotation"/>
 			<item value="Hibernate-Assocation-M2M-BI-XML"/>
 			<item value="Hibernate-Assocation-O2O-BI-XML"/>
 			<item value="Hiberante-Assocation-M2M-UNI-XML"/>
@@ -29,11 +35,16 @@
 			<item value="Hibernate-CRUD-Annotation"/>
 			<item value="Hibernate-CRUD-XML"/>
 			<item value="Hibernate-Annotation"/>
-			<item value="Hibernate-XML"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Hibernate-Criteria"/>
+			<item value="Hibernate-HQL1"/>
+			<item value="Hibernate-Inheritence-TPS"/>
+			<item value="Hibernate-Inheritence-TPC"/>
+			<item value="Hibernate-Inheritence-TPH"/>
+			<item value="Hibenate-Assocation-M2M-BI-Annotation"/>
 			<item value="Hibernate-Assocation-M2M-BI-XML"/>
 			<item value="Hibernate-Assocation-O2O-BI-XML"/>
 			<item value="Hiberante-Assocation-M2M-UNI-XML"/>
@@ -43,7 +54,6 @@
 			<item value="Hibernate-CRUD-Annotation"/>
 			<item value="Hibernate-CRUD-XML"/>
 			<item value="Hibernate-Annotation"/>
-			<item value="Hibernate-XML"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>

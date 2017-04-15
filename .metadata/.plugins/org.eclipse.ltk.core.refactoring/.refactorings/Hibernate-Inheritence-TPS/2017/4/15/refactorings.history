@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Hibernate-Inheritence-TPS/src/hibernate.hbm.xml&apos; to &apos;mapping.hbm.xml&apos;" description="Rename resource &apos;hibernate.hbm.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/hibernate.hbm.xml" name="mapping.hbm.xml" stamp="1492106119336" updateReferences="true"/>
+</session>
