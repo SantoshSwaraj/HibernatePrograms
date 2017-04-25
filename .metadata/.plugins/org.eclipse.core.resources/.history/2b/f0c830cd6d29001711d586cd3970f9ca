@@ -1,0 +1,67 @@
+package co.santosh.test;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.hibernate.Filter;
+import org.hibernate.Session;
+
+import co.santosh.hbm.Branch;
+
+public class HibernateTest {
+
+	private void populateBranches(){
+		Session session = HibernateUtils.getSessionFactory().openSession();
+		try {
+			session.beginTransaction();
+			session.save(new Branch("TestBranch", true));
+			session.save(new Branch("TestBranch1", true));
+			session.save(new Branch("BranchSub", true));
+			session.save(new Branch("BranchSub2", true));
+			session.getTransaction().commit();
+		} catch (Exception e) {
+		} finally {
+			session.close();
+		}
+	}
+	
+	private void testFilter() {
+		Session session = HibernateUtils.getSessionFactory().openSession();
+		try {
+			System.out.println("****** Enabling Filter branchNameFilte******");
+
+			Filter filter = session.enableFilter("branchNameFilter");
+			filter.setParameter("branchNameFilterParam", "TestBranch");
+
+			List<Branch> branchList = session.createQuery("from Branch").list();
+			for (Branch b : branchList) {
+				System.out.println(" Branch Name " + b.getBranchName());
+			}
+
+			System.out.println("****** Disabled Filter ******");
+
+			session.disableFilter("branchNameFilter");
+		
+			branchList = session.createQuery("from Branch").list();
+			for (Branch b : branchList) {
+				System.out.println(" Branch Name " + b.getBranchName());
+			}
+		} catch (Exception e) {
+		} finally {
+			session.close();
+		}
+	}
+	
+	public static void main(String[] args) throws IOException {
+		try{
+		HibernateTest test1 = new HibernateTest();
+		test1.populateBranches();
+		test1.testFilter();
+		}finally{
+			HibernateUtils
+		}
+	}
+
+}
+
+

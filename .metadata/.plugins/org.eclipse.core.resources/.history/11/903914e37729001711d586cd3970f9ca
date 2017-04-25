@@ -1,0 +1,5 @@
+package co.santsoh.test;
+
+public class HibernateUtils {
+
+}

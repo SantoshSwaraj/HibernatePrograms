@@ -1,0 +1,26 @@
+package co.santosh.test;
+
+import org.hibernate.Session;
+
+import co.santosh.hbm.Branch;
+
+public class HibernateTest {
+
+	public static void main(String[] args) {
+		Session session = HibernateUtils.getSessionFactory().openSession();
+		try {
+			session.beginTransaction();
+			session.save(new Branch("TestBranch", true));
+			session.save(new Branch("TestBranch1", true));
+			session.save(new Branch("BranchSub", true));
+			session.save(new Branch("BranchSub2", true));
+			session.getTransaction().commit();
+		} catch (Exception e) {
+		} finally {
+			session.close();
+		}
+	}
+
+}
+
+
