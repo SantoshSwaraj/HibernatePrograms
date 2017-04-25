@@ -20,6 +20,11 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="LuceneSearchDemo"/>
+			<item value="LuceneSearchProject"/>
+			<item value="Hibernate-Filter-WithAssocation"/>
+			<item value="Hiberante-Assocation_Filter"/>
+			<item value="Hibernate_Filters"/>
 			<item value="Hibernate-Criteria"/>
 			<item value="Hibernate-HQL1"/>
 			<item value="Hibernate-Inheritence-TPS"/>
@@ -30,15 +35,15 @@
 			<item value="Hibernate-Assocation-O2O-BI-XML"/>
 			<item value="Hiberante-Assocation-M2M-UNI-XML"/>
 			<item value="Hibernate-Assocation-O2O-UNI-XML"/>
-			<item value="Hibernate-Association-O2M-UNI-XML"/>
-			<item value="Hibernate-Association-M2O-XML"/>
-			<item value="Hibernate-CRUD-Annotation"/>
-			<item value="Hibernate-CRUD-XML"/>
-			<item value="Hibernate-Annotation"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="LuceneSearchDemo"/>
+			<item value="LuceneSearchProject"/>
+			<item value="Hibernate-Filter-WithAssocation"/>
+			<item value="Hiberante-Assocation_Filter"/>
+			<item value="Hibernate_Filters"/>
 			<item value="Hibernate-Criteria"/>
 			<item value="Hibernate-HQL1"/>
 			<item value="Hibernate-Inheritence-TPS"/>
@@ -49,11 +54,6 @@
 			<item value="Hibernate-Assocation-O2O-BI-XML"/>
 			<item value="Hiberante-Assocation-M2M-UNI-XML"/>
 			<item value="Hibernate-Assocation-O2O-UNI-XML"/>
-			<item value="Hibernate-Association-O2M-UNI-XML"/>
-			<item value="Hibernate-Association-M2O-XML"/>
-			<item value="Hibernate-CRUD-Annotation"/>
-			<item value="Hibernate-CRUD-XML"/>
-			<item value="Hibernate-Annotation"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>

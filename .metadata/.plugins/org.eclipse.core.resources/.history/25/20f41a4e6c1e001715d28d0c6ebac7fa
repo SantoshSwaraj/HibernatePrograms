@@ -1,6 +1,0 @@
-package co.santosh.hbm;
-
-public class Department {
-	private Integer deptId;
-	private String deptName;
-}

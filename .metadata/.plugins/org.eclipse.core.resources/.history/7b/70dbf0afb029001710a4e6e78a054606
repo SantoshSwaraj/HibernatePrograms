@@ -1,0 +1,36 @@
+package co.santosh.utils;
+
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.MongoClient;
+
+public class MongoDBJDBC {
+	public static DB getConnection(){
+		DB db = null;
+		 try{   
+				
+	         // To connect to mongodb server
+	         MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
+				
+	         // Now connect to your databases
+	         db = mongoClient.getDB( "test" );
+	         System.out.println("Connect to database successfully");
+				
+	      }catch(Exception e){
+	         System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+	      }
+		 return db;
+	}
+	
+	public static void createCollection(){
+		DB db = null;
+		try{
+			DBCollection coll = db.createCollection("mycol",null);
+	        System.out.println("Collection created successfully");
+		}
+		catch(Exception e){
+			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+		}
+		
+	}
+}

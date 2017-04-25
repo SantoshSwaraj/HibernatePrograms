@@ -1,0 +1,5 @@
+package co.santosh.utils;
+
+public class MongoDBJDBC {
+
+}
