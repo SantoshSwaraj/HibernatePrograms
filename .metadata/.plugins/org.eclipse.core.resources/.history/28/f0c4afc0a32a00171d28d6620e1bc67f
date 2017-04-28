@@ -1,0 +1,27 @@
+package co.santosh.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import co.santosh.dao.ItemDAO;
+import co.santosh.dao.ProductDAO;
+import co.santosh.model.Product;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		@SuppressWarnings("resource")
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ProductDAO productDAO = (ProductDAO)context.getBean("productDAO");
+		ItemDAO itemDAO = (ItemDAO)context.getBean("itemDAO");
+		
+		Product product = new Product();
+		product.setName("Mobiles");
+		product.setStatus(true);
+	
+		productDAO.addProduct(product);
+		
+
+	}
+
+}

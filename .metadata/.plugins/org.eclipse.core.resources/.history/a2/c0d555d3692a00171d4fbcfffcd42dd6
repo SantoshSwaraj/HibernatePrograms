@@ -1,0 +1,5 @@
+package co.santosh.model;
+
+public class Product {
+
+}

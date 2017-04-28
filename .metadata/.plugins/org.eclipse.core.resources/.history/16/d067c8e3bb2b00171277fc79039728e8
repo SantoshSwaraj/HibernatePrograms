@@ -1,0 +1,72 @@
+package com.edureka.co.operations;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import co.santosh.service.ItemService;
+import co.santosh.service.ItemServiceImpl;
+import co.santosh.service.ProductService;
+import co.santosh.service.ProductServiceImpl;
+
+
+public class CreateProductItems {
+
+	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+ 
+	ProductService productService = new ProductServiceImpl(context);
+
+	ItemService itemService = new ItemServiceImpl(context);
+
+	String[] mobileItems = { "Samsung", "Sony", "Htc", "Apple", "Nokia" };
+
+	String[] laptopItems = { "HP", "Dell", "Lenovo", "Toshiba" };
+
+	private void createProduct() {
+		Product product = new Product();
+		product.setName("Mobiles");
+		product.setStatus(true);
+		productService.addProduct(product);
+		Product product1 = new Product();
+		product1.setName("Laptops");
+		product1.setStatus(true);
+		productService.addProduct(product1);
+	}
+
+	private void createItems() {
+		List<Product> products = productService.listProduct();
+		double price = 50000.0;
+		for (Product product : products) {
+			if (product.getName().equals("Mobiles")) {
+				for (String itemName : mobileItems) {
+					Item item = new Item();
+					item.setItemName(itemName);
+					price=price+300;
+					item.setItemPrice(price);
+					item.setProductId(product);
+					item.setStatus(true);
+				    itemService.addItem(item);
+				}
+
+			} else {
+				for (String itemName : laptopItems) {
+					Item item = new Item();
+					item.setItemName(itemName);
+					price=price+500;
+					item.setItemPrice(price);
+					item.setProductId(product);
+					item.setStatus(true);
+				    itemService.addItem(item);
+				}
+
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		CreateProductItems cc = new CreateProductItems();
+		//cc.createProduct();
+		cc.createItems();
+	}
+}

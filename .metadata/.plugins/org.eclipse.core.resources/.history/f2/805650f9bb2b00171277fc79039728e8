@@ -1,0 +1,69 @@
+package co.santosh.test;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import co.santosh.model.Item;
+import co.santosh.model.Product;
+import co.santosh.service.ItemService;
+import co.santosh.service.ItemServiceImpl;
+import co.santosh.service.ProductService;
+import co.santosh.service.ProductServiceImpl;
+
+
+public class ItemCRUD {
+	
+	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+	ItemService itemService = new ItemServiceImpl(context);
+
+	ProductService productService = new ProductServiceImpl(context);
+
+	public int createItem(Product product) {
+		Item item = new Item();
+		Item item1 = new Item();
+		item.setItemName("testItem");
+		item.setItemPrice(500.0);
+		item.setProductId(product);
+		item.setStatus(true);
+		item1.setItemName("testItem1");
+		item1.setItemPrice(540.0);
+		item1.setProductId(product);
+		item1.setStatus(false);
+		itemService.addItem(item1);
+		return itemService.addItem(item);
+	}
+
+	public Product getProduct() {
+		List<Product> products = productService.listProduct();
+		if (!products.isEmpty()) {
+			return products.get(0);
+		} else {
+			return null;
+		}
+	}
+
+	public void getItems() {
+
+		List<Item> items = itemService.listItem();
+		for (Item item : items) {
+			System.out.println(item.getItemName());
+			System.out.println(item.getProductId().getName());
+		}
+
+	}
+
+	public void performCrud(Product product) {
+		int id = createItem(product);
+		Item item = itemService.getItemById(id);
+		System.out.println(" item id created " + id);
+		getItems();
+		item.setItemName("updated");
+		itemService.updateItem(item);
+		itemService.removeItem(id);
+	}
+
+
+}

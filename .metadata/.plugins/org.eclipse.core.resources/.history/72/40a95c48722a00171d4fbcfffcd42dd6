@@ -1,0 +1,59 @@
+package co.santosh.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import co.santosh.model.Item;
+
+public class ItemDAOImpl implements ItemDAO{
+	SessionFactory sessionFactory;
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	@Override
+	public int addItem(Item item) {
+		Session session  = this.sessionFactory.getCurrentSession();
+		session.save(item);
+		System.out.println("Item Saved Successfully..");
+		return item.getId();
+	}
+
+	@Override
+	public void updateItem(Item item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Item> listItem() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Item> listProductItem(int productId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Item getItemById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeItem(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+package co.santosh.service;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+
+import co.santosh.dao.ProductDAO;
+import co.santosh.model.Product;
+
+public class ProductServiceImpl implements ProductService {
+	ApplicationContext context = null;
+	ProductDAO productDAO = null;
+
+	public ProductServiceImpl(ApplicationContext context) {
+
+		this.context = context;
+		productDAO = (ProductDAO) context.getBean("productDAO");
+	}
+
+	@Override
+	public int addProduct(Product product) {
+		
+		return productDAO.addProduct(product);
+	}
+
+	@Override
+	public void updateProduct(Product product) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Product> listProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product getProductById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeProduct(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

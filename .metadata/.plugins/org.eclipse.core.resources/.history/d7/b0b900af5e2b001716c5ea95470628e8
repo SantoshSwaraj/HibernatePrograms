@@ -1,0 +1,71 @@
+package co.santosh.test;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import co.santosh.model.Item;
+import co.santosh.model.Product;
+import co.santosh.service.ItemService;
+import co.santosh.service.ItemServiceImpl;
+import co.santosh.service.ProductService;
+import co.santosh.service.ProductServiceImpl;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		ProductService productService = (ProductServiceImpl)context.getBean("productServiceImpl");
+		
+		ItemService itemService = (ItemServiceImpl)context.getBean("itemServiceImpl");
+		
+		String[] mobileItems = { "Samsung", "Sony", "Htc", "Apple", "Nokia" };
+
+		String[] laptopItems = { "HP", "Dell", "Lenovo", "Toshiba" };
+		
+		/*Product product = new Product();
+		product.setName("Mobiles");
+		product.setStatus(true);
+		productService.addProduct(product);
+		
+		Product product1 = new Product();
+		product1.setName("Laptops");
+		product1.setStatus(true);
+		productService.addProduct(product1);*/
+		
+		List<Product> products = productService.listProduct();
+		double price = 50000.0;
+		for (Product product2 : products) {
+			if (product2.getName().equals("Mobiles")) {
+				for (String itemName : mobileItems) {
+					Item item = new Item();
+					item.setItemName(itemName);
+					price=price+300;
+					item.setItemPrice(price);
+					item.setProductId(product2);
+					item.setStatus(true);
+				    itemService.addItem(item);
+				}
+
+			} else {
+				for (String itemName : laptopItems) {
+					Item item = new Item();
+					item.setItemName(itemName);
+					price=price+500;
+					item.setItemPrice(price);
+					item.setProductId(product2);
+					item.setStatus(true);
+				    itemService.addItem(item);
+				}
+
+			}
+		}
+
+		
+		
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package co.santosh.test;
+
+import co.santosh.operations.CreateProductItems;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		CreateProductItems cc = new CreateProductItems();
+		cc.createProduct();
+		cc.createItems();
+		
+		
+
+	}
+
+}

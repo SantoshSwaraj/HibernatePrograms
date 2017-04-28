@@ -1,0 +1,19 @@
+package co.santosh.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import co.santosh.service.ProductService;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ProductService productServcice	= (ProductService)context.getBean("productServiceImpl");
+		
+		
+		
+
+	}
+
+}

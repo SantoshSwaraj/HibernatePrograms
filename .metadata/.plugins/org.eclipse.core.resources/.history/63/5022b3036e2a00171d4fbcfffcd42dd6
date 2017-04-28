@@ -1,0 +1,39 @@
+package co.santosh.dao;
+
+import java.util.List;
+
+import co.santosh.model.Product;
+
+public class ProductDAOImpl implements ProductDAO {
+
+	@Override
+	public int addProduct(Product product) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void updateProduct(Product product) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Product> listProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product getProductById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeProduct(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

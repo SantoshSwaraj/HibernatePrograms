@@ -1,0 +1,70 @@
+package co.santosh.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import co.santosh.model.Product;
+
+@Repository
+public class ProductDAOImpl implements ProductDAO {
+	
+	private SessionFactory sessionFactory;
+	
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	@Override
+	@Transactional(readOnly=false)
+	public int addProduct(Product product) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.save(product);
+		System.out.println("Product Saved Successfully..");
+		return product.getId();
+	}
+
+	@Override
+	@Transactional(readOnly=false)
+	public void updateProduct(Product product) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.update(product);
+		System.out.println("Product Updated Successfully..");
+	}
+
+	@Override
+	public List<Product> listProduct() {
+		Session session = this.sessionFactory.getCurrentSession();
+		@SuppressWarnings("unchecked")
+		List<Product> productList = session.createQuery("from Product").list();
+		System.out.println("Product List Returned..");
+		return productList;
+	}
+
+	@Override
+	public Product getProductById(int id) {
+		Session session = this.sessionFactory.getCurrentSession();
+		Product product = (Product) session.get(Product.class,id);
+		System.out.println("Product Loaded Successfully");
+		return product;
+	}
+
+	@Override
+	@Transactional(readOnly=false)
+	public void removeProduct(int id) {
+		Session session = this.sessionFactory.getCurrentSession();
+		Product product = (Product) session.load(Product.class,
+				new Integer(id));
+		session.delete(product);
+		System.out.println("product deleted successfully");
+
+	}
+
+}

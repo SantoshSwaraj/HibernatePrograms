@@ -1,0 +1,44 @@
+package co.santosh.test;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import co.santosh.model.Product;
+import co.santosh.service.ProductService;
+import co.santosh.service.ProductServiceImpl;
+
+public class ProductCRUD {
+	
+	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+	ProductService productService = new ProductServiceImpl(context);
+
+	public int createProduct() {
+		Product product=new Product();
+		product.setName("testProduct");
+		product.setStatus(true);
+		return productService.addProduct(product);
+	}
+
+
+
+	public void getProducts(){
+		List<Product> products=productService.listProduct();
+		for(Product product:products){
+			System.out.println(product.getName());
+		}
+	}
+	
+	public void performCrud(){
+		int id = createProduct();
+	    Product product=productService.getProductById(id);
+	    System.out.println(" product id created " + id);
+		getProducts();
+	    product.setName("updated");
+	    productService.updateProduct(product);
+	   //productService.removeProduct(id);
+	}
+
+}

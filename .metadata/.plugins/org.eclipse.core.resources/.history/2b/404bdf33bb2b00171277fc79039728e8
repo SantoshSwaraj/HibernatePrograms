@@ -1,0 +1,77 @@
+package co.santosh.operations;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import co.santosh.model.Item;
+import co.santosh.model.Product;
+import co.santosh.service.ItemService;
+import co.santosh.service.ItemServiceImpl;
+import co.santosh.service.ProductService;
+import co.santosh.service.ProductServiceImpl;
+
+public class CreateProductItems {
+	
+	ApplicationContext context = null;
+	
+	ProductService productService =  null;
+	
+	ItemService itemService =  null;
+	
+	
+	public CreateProductItems(){
+		this.context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		this.productService = new ProductServiceImpl(context);
+		this.itemService = new ItemServiceImpl(context);
+	}
+
+	static String[] mobileItems = { "Samsung", "Sony", "Htc", "Apple", "Nokia" };
+
+	static String[] laptopItems = { "HP", "Dell", "Lenovo", "Toshiba" };
+
+	public void createProduct() {
+		Product product = new Product();
+		product.setName("Mobiles");
+		product.setStatus(true);
+		productService.addProduct(product);
+		
+		Product product1 = new Product();
+		product1.setName("Laptops");
+		product1.setStatus(true);
+		productService.addProduct(product1);
+		
+	}
+
+	public void createItems() {
+		List<Product> products = productService.listProduct();
+		double price = 50000.0;
+		for (Product product : products) {
+			if (product.getName().equals("Mobiles")) {
+				for (String itemName : mobileItems) {
+					Item item = new Item();
+					item.setItemName(itemName);
+					price=price+300;
+					item.setItemPrice(price);
+					item.setProductId(product);
+					item.setStatus(true);
+				    itemService.addItem(item);
+				}
+
+			} else {
+				for (String itemName : laptopItems) {
+					Item item = new Item();
+					item.setItemName(itemName);
+					price=price+500;
+					item.setItemPrice(price);
+					item.setProductId(product);
+					item.setStatus(true);
+				    itemService.addItem(item);
+				}
+
+			}
+		}
+	}
+
+}

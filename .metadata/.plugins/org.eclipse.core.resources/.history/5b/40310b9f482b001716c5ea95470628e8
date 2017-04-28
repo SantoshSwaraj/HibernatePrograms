@@ -1,0 +1,33 @@
+package co.santosh.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import co.santosh.model.Product;
+import co.santosh.service.ProductService;
+import co.santosh.service.ProductServiceImpl;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ProductService productServcice	= (ProductServiceImpl)context.getBean("productServiceImpl");
+		
+		String[] mobileItems = { "Samsung", "Sony", "Htc", "Apple", "Nokia" };
+
+		String[] laptopItems = { "HP", "Dell", "Lenovo", "Toshiba" };
+		
+		Product product = new Product();
+		product.setName("Mobiles");
+		product.setStatus(true);
+		productService.addProduct(product);
+		Product product1 = new Product();
+		product1.setName("Laptops");
+		product1.setStatus(true);
+		productService.addProduct(product1);
+		
+		
+
+	}
+
+}

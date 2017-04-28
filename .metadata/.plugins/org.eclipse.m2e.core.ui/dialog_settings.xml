@@ -2,6 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="co.santosh.inventory"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="Product_Item_Inventory"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
 		<list key="ciManagementUrl">
 		</list>
@@ -18,8 +39,34 @@
 		<item value="0" key="y"/>
 		<item value="667" key="height"/>
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Santosh Kushwaha\Downloads\project"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="InventoryProject"/>
+			<item value="Hibernate-MongoDB_OGM"/>
+			<item value="Java-MongoDB_Integration"/>
 			<item value="LuceneSearchDemo"/>
 			<item value="LuceneSearchProject"/>
 			<item value="Hibernate-Filter-WithAssocation"/>
@@ -32,13 +79,13 @@
 			<item value="Hibernate-Inheritence-TPH"/>
 			<item value="Hibenate-Assocation-M2M-BI-Annotation"/>
 			<item value="Hibernate-Assocation-M2M-BI-XML"/>
-			<item value="Hibernate-Assocation-O2O-BI-XML"/>
-			<item value="Hiberante-Assocation-M2M-UNI-XML"/>
-			<item value="Hibernate-Assocation-O2O-UNI-XML"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="InventoryProject"/>
+			<item value="Hibernate-MongoDB_OGM"/>
+			<item value="Java-MongoDB_Integration"/>
 			<item value="LuceneSearchDemo"/>
 			<item value="LuceneSearchProject"/>
 			<item value="Hibernate-Filter-WithAssocation"/>
@@ -51,9 +98,37 @@
 			<item value="Hibernate-Inheritence-TPH"/>
 			<item value="Hibenate-Assocation-M2M-BI-Annotation"/>
 			<item value="Hibernate-Assocation-M2M-BI-XML"/>
-			<item value="Hibernate-Assocation-O2O-BI-XML"/>
-			<item value="Hiberante-Assocation-M2M-UNI-XML"/>
-			<item value="Hibernate-Assocation-O2O-UNI-XML"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
